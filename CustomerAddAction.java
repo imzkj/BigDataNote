@@ -1,22 +1,17 @@
-package com.fred.servlet;
+package com.ibeifeng.servlet;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fred.action.CustomerAddAction;
-import com.fred.action.WebAction;
+import com.ibeifeng.action.CustomerAddAction;
+import com.ibeifeng.action.WebAction;
 
-/**
- * Servlet implementation class WebController
- */
-@WebServlet("/action")
 public class WebController extends HttpServlet {
 	private Map map;
 	
