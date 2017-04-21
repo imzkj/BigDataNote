@@ -1,52 +1,36 @@
 package com.fred.action;
 
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fred.dao.CustomerDAO;
-import com.fred.daofactory.CustomerDAOFactory;
-import com.fred.vo.Customer;
-
-public class CustomerAddAction extends WebAction {
-
+public abstract class WebAction {
+	
 	/**
 	 * 执行方法
 	 */
-	public void execute(HttpServlet servlet,HttpServletRequest request, HttpServletResponse response) {
-		//获得DAO实例
-		CustomerDAO cdao = CustomerDAOFactory.getCustomerDAO();
-		
-		//接受参数
-		String customercode = request.getParameter("customercode");
-		String page = null;
-		//判断客户编号是否占用
-		if(cdao.findByCustomerCode(customercode) == null) {
-			String customername = request.getParameter("customername");
-			String phone = request.getParameter("phone");
-			String address = request.getParameter("address");
-			String relationman = request.getParameter("relationman");
-			String other = request.getParameter("other");
-			
-			//封装Customer对象
-			Customer customer = new Customer();
-			customer.setCustomercode(customercode);
-			customer.setCustomername(customername);
-			customer.setPhone(phone);
-			customer.setAddress(address);
-			customer.setRelationman(relationman);
-			customer.setOther(other);
-			
-			//通过DAO实例完成客户添加
-			cdao.addCustomer(customer);
-			//执行跳转
-			page = "/CustomerAdd.jsp";
-		} else {
-			page = "/CustomerAdd.jsp";
-			//添加错误信息
-			request.setAttribute("error", "客户编号被占用");
+	public abstract void execute(HttpServlet servlet,HttpServletRequest request, HttpServletResponse response);
+	
+	/**
+	 * 跳转方法
+	 */
+	public void forward(HttpServlet servlet,HttpServletRequest request, HttpServletResponse response,String page){
+		//获得ServletContext
+		ServletContext sc = servlet.getServletContext();
+		//获得RequestDispatcher，并指定跳转页面
+		RequestDispatcher rdispatcher = sc.getRequestDispatcher(page);
+		//执行跳转
+		try {
+			rdispatcher.forward(request, response);
+		} catch (ServletException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		forward(servlet, request, response, page);
 	}
-
 }
