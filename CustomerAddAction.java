@@ -1,14 +1,15 @@
-package com.ibeifeng.action;
+package com.fred.action;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.ibeifeng.dao.CustomerDAO;
-import com.ibeifeng.daofactory.CustomerDAOFactory;
-import com.ibeifeng.vo.Customer;
+import com.fred.dao.CustomerDAO;
+import com.fred.daofactory.CustomerDAOFactory;
+import com.fred.vo.Customer;
 
 public class CustomerAddAction extends WebAction {
+
 	/**
 	 * Ö´ÐÐ·½·¨
 	 */
@@ -47,4 +48,5 @@ public class CustomerAddAction extends WebAction {
 		}
 		forward(servlet, request, response, page);
 	}
+
 }
