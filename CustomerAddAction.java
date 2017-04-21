@@ -1,4 +1,4 @@
-package com.fred.action;
+package com.ibeifeng.action;
 
 import java.io.IOException;
 
