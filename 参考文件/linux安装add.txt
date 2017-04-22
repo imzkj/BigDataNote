@@ -1,0 +1,59 @@
+1. 主机名
+vi /etc/sysconfig/network
+
+
+2.中文
+vim /etc/sysconfig/i18n
+#注释原来的
+LANG="zh_CN.UTF-8"
+
+
+3.防火墙
+
+service iptables stop
+
+chkconfig iptables off
+
+
+4.安装rpm
+
+rpm -ivh *.rpm --force --nodeps
+
+
+5.hosts
+vi /etc/hosts
+
+
+6.oracle乱码
+vi .bash_profile
+
+export NLS_LANG="Simplified Chinese_CHINA.AL32UTF8"
+
+
+
+
+
+7. 红帽自带yum不能运行
+
+
+解决方案：
+cd /etc/yum.repos.d/
+
+wget http://docs.linuxtone.org/soft/lemp/CentOS-Base.repo
+
+rm rhel-source.repo
+
+mv CentOS-Base.repo rhel-source.repo
+
+
+7.字符界面
+
+vi /etc/inittab
+3
+
+8.禁止ssh超时断开
+
+vi /etc/ssh/sshd_config
+
+#ClientAliveInterval 0	----->	ClientAliveInterval 60
+#ClientAliveCountMax 3	----->	ClientAliveCountMax 3
