@@ -184,7 +184,7 @@ public class DataJoinMapReduce extends Configured implements Tool {
 		job.setReducerClass(DataJoinReducer.class);
 		job.setOutputKeyClass(NullWritable.class);
 		job.setOutputValueClass(Text.class);
-
+job.setNumReduceTasks(2);
 		// submit job -> YARN
 		boolean isSuccess = job.waitForCompletion(true);
 		return isSuccess ? 0 : 1;
@@ -196,8 +196,8 @@ public class DataJoinMapReduce extends Configured implements Tool {
 		Configuration configuration = new Configuration();
 
 		args = new String[] {
-				"hdfs://hadoop-senior01.ibeifeng.com:8020/user/beifeng/join/input",
-				"hdfs://hadoop-senior01.ibeifeng.com:8020/user/beifeng/join/output2" };
+				"hdfs://MyDream:8020/home/hadoop/testdata/join/input",
+				"hdfs://MyDream:8020/home/hadoop/testdata/join/output5" };
 
 		// run job
 		int status = ToolRunner.run(configuration, new DataJoinMapReduce(),
