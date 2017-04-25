@@ -46,8 +46,8 @@ public class HDFStest {
 
 	@Test
 	public void testPut() throws IOException {
-		Path l = new Path("E:\\BaiduYunDownload\\大数据架构师Hadoop课程资料\\04.随堂资料\\orders.csv");
-		Path y = new Path("/home/hadoop/testdata/join/input");
+		Path l = new Path("E:\\BaiduYunDownload\\大数据架构师Hadoop课程资料\\04.随堂资料\\test.txt");
+		Path y = new Path("/home/hadoop/testdata/webuv/input");
 		fs.copyFromLocalFile(l, y);
 	}
 
@@ -116,7 +116,7 @@ public class HDFStest {
 
 	@Test
 	public void testMkdir() throws IOException {
-		String path="/home/hadoop/testdata/join/input";
+		String path="/home/hadoop/testdata/webuv/input";
 		boolean flag = fs.mkdirs(new Path(path));
 		System.out.println(flag);
 	}
@@ -129,7 +129,7 @@ public class HDFStest {
 
 	@Test
 	public void testDel() throws IllegalArgumentException, IOException {
-		boolean flag = fs.delete(new Path("/tem/tem.txt"), true);
+		boolean flag = fs.delete(new Path("/home/hadoop/testdata/join/output5"), true);
 		System.out.println(flag);
 	}
 
