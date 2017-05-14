@@ -46,6 +46,7 @@ public class WordCountTrident2 {
         Stream stream = topology.newStream(SPOUT_ID, testSpout);
         // 指定Tuple中哪个keyvalue对进行 过滤操作
         stream
+
                 //.each(new Fields("str"), new PrintTestFilter())
                 // 链式调用
                 //.each(new Fields("str"), new HasFlumeFilter())
