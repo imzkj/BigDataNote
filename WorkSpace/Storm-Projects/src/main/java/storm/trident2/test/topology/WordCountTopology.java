@@ -1,4 +1,4 @@
-package com.ibeifeng.storm.test;
+package storm.trident2.test.topology;
 
 import java.util.Map;
 import java.util.UUID;
