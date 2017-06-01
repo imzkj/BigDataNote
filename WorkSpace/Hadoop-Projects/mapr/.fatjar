@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Sun Mar 10 20:57:08 CST 2013
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=false
+onejar.checkbox=false
+jarname=D\:\\proj\\mapr.jar
+manifest.mergeall=false
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=<jar|hadoop-core-1.0.4.jar>;<jar|jedis-2.1.0.jar>;<jar|elephant-bird-core-3.0.6.jar>;<jar|protobuf-2.3.0.jar>
+includes=

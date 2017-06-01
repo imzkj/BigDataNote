@@ -1,0 +1,11 @@
+Moved to trash: hdfs://master:8020/output
+======================================
+=  Iteration:    1
+=  Input path:   /output/input.txt
+=  Output path:  /output/1
+======================================
+======================================
+=  Iteration:    2
+=  Input path:   /output/1
+=  Output path:  /output/2
+======================================

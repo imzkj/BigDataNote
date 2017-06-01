@@ -1,0 +1,116 @@
+agent1.sources = src1 src2
+agent1.sinks = sin1
+agent1.channels = chn1
+
+#src1
+agent1.sources.src1.type = netcat
+agent1.sources.src1.bind = 192.168.1.121
+agent1.sources.src1.port = 6666
+agent1.sources.src1.channels = chn1
+
+#src2
+agent1.sources.src2.type = syslogtcp
+agent1.sources.src2.host = 192.168.1.121
+agent1.sources.src2.port = 5140
+agent1.sources.src2.channels = chn1
+
+#
+agent1.channels.chn1.type = memory
+
+#sink
+agent1.sinks.sin1.type = logger
+agent1.sinks.sin1.channel = chn1
+
+####################################################
+agent2.sources = src1
+#agent2.sinks = sin1 sin2
+agent2.channels = chn1 chn2
+agent2.sources.src1.selector.type = replicating
+
+#src1
+agent2.sources.src1.type = netcat
+agent2.sources.src1.bind = 192.168.1.121
+agent2.sources.src1.port = 6666
+agent2.sources.src1.channels = chn1 chn2
+
+
+#
+agent2.channels.chn1.type = memory
+agent2.channels.chn2.type = memory
+
+#sin1
+agent2.sinks.sin1.type = logger
+agent2.sinks.sin1.channel = chn1
+
+#sin2
+agent2.sinks.sin2.type = hdfs
+agent2.sinks.sin2.hdfs.path = /flume/log/
+agent2.sinks.sin2.hdfs.fileType = DataStream
+agent2.sinks.sin2.hdfs.rollInterval = 5
+agent2.sinks.sin2.hdfs.filePrefix = log%{servername}
+agent2.sinks.sin2.channel = chn2
+
+#######################################################
+agent3.sources = src1 src2
+agent3.sinks = sin1 sin2
+agent3.channels = chn1 chn2
+agent3.sources.src1.selector.type = replicating
+
+#src1
+agent3.sources.src1.type = netcat
+agent3.sources.src1.bind = 192.168.1.121
+agent3.sources.src1.port = 6666
+agent3.sources.src1.channels = chn1 chn2
+
+#src2
+agent3.sources.src2.type = netcat
+agent3.sources.src2.bind = 192.168.1.121
+agent3.sources.src2.port = 6667
+agent3.sources.src2.channels = chn1
+
+#
+agent3.channels.chn1.type = memory
+agent3.channels.chn2.type = memory
+
+#sin1
+agent3.sinks.sin1.type = logger
+agent3.sinks.sin1.channel = chn1
+
+#sin2
+agent3.sinks.sin2.type = hdfs
+agent3.sinks.sin2.hdfs.path = /flume/log/
+agent3.sinks.sin2.hdfs.fileType = DataStream
+agent3.sinks.sin2.hdfs.rollInterval = 5
+agent3.sinks.sin2.hdfs.filePrefix = log%{servername}
+agent3.sinks.sin2.channel = chn2
+
+
+########################################################
+agent4.sources = src1
+agent4.sinks = sin1 sin2
+agent4.channels = chn1
+#agent4.sinkgroups = g1
+#agent4.sinkgroups.g1.sinks = sin1 sin2
+#agent4.sinkgroups.g1.processor.type = load_balance
+
+#src1
+agent4.sources.src1.type = netcat
+agent4.sources.src1.bind = 192.168.1.121
+agent4.sources.src1.port = 6666
+agent4.sources.src1.channels = chn1
+
+#
+agent4.channels.chn1.type = memory
+
+#sin1
+agent4.sinks.sin1.type = logger
+agent4.sinks.sin1.channel = chn1
+
+#sin2
+agent4.sinks.sin2.type = hdfs
+agent4.sinks.sin2.hdfs.path = /flume/log/
+agent4.sinks.sin2.hdfs.fileType = DataStream
+agent4.sinks.sin2.hdfs.rollInterval = 5
+agent4.sinks.sin2.hdfs.filePrefix = log%{servername}
+agent4.sinks.sin2.channel = chn1
+

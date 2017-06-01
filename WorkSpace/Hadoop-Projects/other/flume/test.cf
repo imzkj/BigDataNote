@@ -1,0 +1,22 @@
+test.sources = so1
+test.sinks = si1
+test.channels = c1
+
+#source
+test.sources.so1.type = spooldir
+test.sources.so1.spoolDir = /home/robby/tmp/log/flumeinput
+
+
+#sink
+test.sinks.si1.type = hdfs
+test.sinks.si1.hdfs.path = /flume/log
+test.sinks.si1.hdfs.fileType = DataStream
+
+#channel
+test.channels.c1.type = memory
+test.channels.c1.capacity = 1000
+test.channels.c1.transactionCapacity = 100
+
+test.sources.so1.channels = c1
+test.sinks.si1.channel = c1
+
