@@ -11,7 +11,7 @@ import org.apache.hadoop.mapreduce.lib.input.KeyValueTextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.commons.io.*;
-import org.apache.commons.lang.*;
+import org.apache.commons.lang3.*;
 import org.robby.mr.count.RedisOutputFormat;
 
 
@@ -54,7 +54,8 @@ public class Main {
 		job.setJarByClass(Main.class);
 		job.setMapperClass(Map.class);
 		job.setReducerClass(Reduce.class);
-		
+
+		//与之前的inputformat不同，这个keyvaluesinputformat将输入文件的第一行的第一个字段当做key，其他的当做value来处理
 		job.setInputFormatClass(KeyValueTextInputFormat.class);
 		
 		job.setOutputKeyClass(Text.class);

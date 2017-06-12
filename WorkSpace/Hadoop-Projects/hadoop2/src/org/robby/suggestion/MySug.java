@@ -23,9 +23,14 @@ public class MySug extends ActionSupport{
 
     public List<String> getResult() {
         result = new ArrayList<String>();
-        result.add("许两逢");
-        result.add("许大官人");
-        result.add("逢神");
+        if (query.equals("liu")) {
+            result.add("刘树敏");
+        }
+        if (query.equals("l") || query.equals("li")) {
+            result.add("刘");
+        }
+        //result.add("许大官人");
+        //result.add("逢神");
         return result;
     }
 
