@@ -23,15 +23,10 @@ public class Sug extends ActionSupport{
 	
 	public Set<String> getResult() {
 		System.out.println(query);
-		//两个关键字查询，按空格分割
-        String[] a = query.split(" ");
-        //指定redis服务运行所在机器
+		
 		Jedis jedis = new Jedis("192.168.1.121");
-		//取两个关键字相同的value合集并返回
-        jedis.zinterstore("_tmpstore", a[0], a[1]);
-        result = jedis.zrevrange("_tmpstore", 0, 5);
-        //删除临时关键字
-		jedis.del("_tmpstore");
+		result = jedis.zrevrange(query, 0, 5);
+		
 		return result;
 	}
 

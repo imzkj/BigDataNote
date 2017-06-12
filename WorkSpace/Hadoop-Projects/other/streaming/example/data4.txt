@@ -1,0 +1,63 @@
+me
+	Type
+	Size
+	Replication
+	Block Size
+	Modification Time
+	Permission
+	Owner
+	Group
+_temporary
+	dir
+	
+	
+	
+	2013-02-19 21:20
+	rwx------
+	robby
+	supergroup
+part-00000
+	file
+	0 KB
+	1
+	64 MB
+	2013-02-19 21:19
+	rw-------
+	robby
+	supergroup
+part-00001
+	file
+	0 KB
+	1
+	64 MB
+	2013-02-19 21:19
+	rw-------
+	robby
+	supergroup
+part-00002
+	file
+	0 KB
+	1
+	64 MB
+	2013-02-19 21:20
+	rw-------
+	robby
+	supergroup
+part-00003
+	file
+	0 KB
+	1
+	64 MB
+	2013-02-19 21:20
+	rw-------
+	robby
+	supergroup
+part-00004
+	file
+	0 KB
+	1
+	64 MB
+	2013-02-19 21:20
+	rw-------
+	robby
+	supergroup

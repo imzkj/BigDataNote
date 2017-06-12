@@ -36,8 +36,6 @@
 			<label>朋友们</label>
 			<table class='table'>
 				<s:iterator value="friends" id='friend'>
-					<%--调用Java里面的方法方式：struts里面配置的action（实际上为该action对应的类），--%>
-					<%--中间用感叹号，后面加上对应的方法--%>
     				<tr><td><s:property value='friend'/></td><td><a href="fri_login!unwatch.do?username=<s:property value='username' />&&unwatch=<s:property value='friend'/>">取消关注</a></td></tr>
 				</s:iterator> 
 			</table>

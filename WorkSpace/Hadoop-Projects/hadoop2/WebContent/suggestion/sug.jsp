@@ -7,27 +7,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Hadoop2 demo</title>
 <link rel="stylesheet", href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-<script type="text/javascript" src="../jquery-3.2.1.js"></script>
-<script type="text/javascript" src="../jquery-ui-1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 
 <link rel="stylesheet", href="../bootstrap/css/bootstrap.css" />
 
 <script type="text/javascript">
-	//jquery方法，加载页面时触发
 	$(document).ready(function(){
-	    //autocomplete方法在jquery-ui.js定义
 		$("#query").autocomplete({
-		    //定义了一个source（即输入关键词下面弹出的可选项），由接下来的
-			//function(request, response)提供
 			source : function(request, response){
-			    //调用ajax方法向后台发送ajax请求
 				$.ajax({
-				    //定义url
 					url : "ajax/sug.do",
-					//返回数据格式为json
 					dataType : "json",
 					data : {
-					    //$("#query")引用id为query的元素，.val()为获取到它的值
 						query : $("#query").val()
 					},
 					success : function(data){
@@ -37,7 +29,6 @@
 					}
 				});
 			},
-			//定义有多少字符改变后向后台发送请求
 			minLength:1,
 		});
 	});
@@ -46,7 +37,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>搜索预测</h1>
+		<h1>Search Demo</h1>
 		<div class="well">
 			<form action="sug.jsp">
 			   <label>Search</label>

@@ -4,14 +4,10 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<constant name="struts.devMode" value="true" />
-	<!--配置struts的url拓展后缀名为.do   ,默认的是 .action-->
 	<constant name="struts.action.extension" value="do" />
 
-	<!--包名为ajax，action名为sug，必须和sug.jsp里面配置的url（ajax/sug.do）相同
-	才能正确拦截（包名不必相同，只需sug.do相同即可），extends表示从json-default继承，
-	因为这个请求要返回json相同action名不同包以最后一个action为准-->
     <package name="ajax" extends="json-default">
-    	<action name="sug" class="org.robby.suggestion.MySug">
+    	<action name="sug" class="org.robby.suggestion.Sug">
     	   <result type="json"></result>
     	</action>
     </package>

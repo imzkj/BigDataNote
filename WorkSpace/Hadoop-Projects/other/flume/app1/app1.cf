@@ -19,11 +19,8 @@ agent1.sinks.sin1.channel = chn1
 #channel
 agent1.channels.chn1.type = memory
 
-#interceptor
 agent1.sources.src1.interceptors = inter1
-#interceptor类型为固定的
 agent1.sources.src1.interceptors.inter1.type = static
-#设置keyvalues
 agent1.sources.src1.interceptors.inter1.key = servername
 agent1.sources.src1.interceptors.inter1.value = main
 
@@ -63,12 +60,8 @@ agent3.channels.chn3.type = memory
 
 #sink
 agent3.sinks.sin3.type = hdfs
-#设置hdfs输出目录
 agent3.sinks.sin3.hdfs.path = /flume/log/
-#设置输出文件编码格式，这个格式才是给人看的
 agent3.sinks.sin3.hdfs.fileType = DataStream
-#设置多少秒刷新内存并输出内容到硬盘
 agent3.sinks.sin3.hdfs.rollInterval = 5
-#设置输出到hdfs文件的名字，按前面agent1,2定义的servername命名，以区分不同agent输出的内容到不同文件
 agent3.sinks.sin3.hdfs.filePrefix = log%{servername}
 agent3.sinks.sin3.channel = chn3

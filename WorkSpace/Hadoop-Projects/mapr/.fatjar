@@ -1,5 +1,5 @@
 #Fat Jar Configuration File
-#Sun Mar 10 20:57:08 CST 2013
+#Wed Jul 03 22:05:48 CST 2013
 onejar.license.required=true
 manifest.classpath=
 manifest.removesigners=false
@@ -10,5 +10,5 @@ manifest.mainclass=
 manifest.file=<createnew>
 jarname.isextern=true
 onejar.expand=
-excludes=<jar|hadoop-core-1.0.4.jar>;<jar|jedis-2.1.0.jar>;<jar|elephant-bird-core-3.0.6.jar>;<jar|protobuf-2.3.0.jar>
+excludes=<jar|jedis-2.1.0.jar>;<jar|commons-logging-1.1.1.jar>;<jar|commons-lang-2.4.jar>;<jar|commons-io-2.1.jar>;<jar|hadoop-core-1.2.0.jar>
 includes=

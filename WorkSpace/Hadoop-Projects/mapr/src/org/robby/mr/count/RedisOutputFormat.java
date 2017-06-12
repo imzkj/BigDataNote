@@ -17,8 +17,6 @@ public class RedisOutputFormat<K, V> extends FileOutputFormat<K, V> {
 		RedisRecordWriter(Jedis jedis){
 			this.jedis = jedis;
 		}
-
-		//关闭redis连接
 		@Override
 		public void close(TaskAttemptContext arg0) throws IOException,
 				InterruptedException {
@@ -26,8 +24,7 @@ public class RedisOutputFormat<K, V> extends FileOutputFormat<K, V> {
 			jedis.disconnect();
 		}
 		
-		//将关键字写进redis（关键字：why， 写进： w-》why，wh-》why）
-		//key为MapReduce统计的关键字，value为该关键字出现的次数
+
 		@Override
 		public void write(K key, V value) throws IOException,
 				InterruptedException {

@@ -113,3 +113,4 @@ agent4.sinks.sin2.hdfs.fileType = DataStream
 agent4.sinks.sin2.hdfs.rollInterval = 5
 agent4.sinks.sin2.hdfs.filePrefix = log%{servername}
 agent4.sinks.sin2.channel = chn1
+
