@@ -26,3 +26,7 @@ target
 /WorkSpace/Hadoop-Projects/mapr/.idea
 /WorkSpace/Hadoop-Projects/mapr/lib
 /WorkSpace/Hadoop-Projects/mapr/out
+*.idea
+out
+lib
+*.iml

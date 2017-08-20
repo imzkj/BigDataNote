@@ -19,16 +19,16 @@
 <configuration>
 	<property>
         	<name>fs.defaultFS</name>
-        	<value>hdfs://MyDream:8020</value>
+        	<value>hdfs://MyDream:9000</value>
 	</property>
 	<property>
         	<name>hadoop.tmp.dir</name>
-        	<value>/home/hadoop/hadoop-2.5.0/tmp</value>
+        	<value>/home/zkj/hadoop-2.7.1/tmp</value>
 	</property>
 
 	<property>
        		<name> hadoop.http.staticuser.user</name>
-       		<value>hadoop</value>
+       		<value>zkj</value>
 	</property>
 
 </configuration>

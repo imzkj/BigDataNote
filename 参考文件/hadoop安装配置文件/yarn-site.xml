@@ -20,8 +20,8 @@
        	 	<value>mapreduce_shuffle</value>
 	</property>
 	<property>
-		<name>yarn.resourcemanager.hostname</name>
-		<value>MyDream</value>
+			<name>yarn.resourcemanager.hostname</name>
+			<value>MyDream</value>
 	</property>
 
 	<property>
@@ -34,5 +34,13 @@
        		<value>106800</value>
 	</property>
 
+	<property>  
+            <name>yarn.nodemanager.pmem-check-enabled</name>  
+			<value>false</value>  
+    </property>  
 
+    <property>  
+			<name>yarn.nodemanager.vmem-check-enabled</name>  
+			<value>false</value>  
+    </property> 
 </configuration>
