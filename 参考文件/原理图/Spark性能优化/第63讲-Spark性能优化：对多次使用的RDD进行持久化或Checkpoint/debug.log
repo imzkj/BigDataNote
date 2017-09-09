@@ -1,0 +1,66 @@
+[4116:1460:0907/080609:INFO:AppRunner.cpp(611)] Begin run process geeplayer, -runfrom openimage "G:\BigDataNote\大数据视频笔记\Spark深入剖析\Spark深入剖析\课程十、大数据核心开发技术 - Spark深入剖析\第三章：Spark性能优化\资料\第63讲-Spark性能优化：对多次使用的RDD进行持久化或Checkpoint\对于多次操作的RDD进行持久化和Checkpoint操作.png", mainplugin is mainPlugin
+[4116:1460:0907/080609:INFO:AppRunner.cpp(617)] ProductName is GeePlayer1
+[4116:1460:0907/080609:INFO:ChannelManager.cpp(1219)] create connection thread
+[4116:1460:0907/080609:INFO:AppRunner.cpp(661)] apppluginbase version is 5.1.3.13
+[4116:1460:0907/080609:INFO:UIlib.cpp(192)] quilib: version is 5.1.3.9
+[4116:1460:0907/080609:INFO:serviceManager.cpp(508)] mainprocessisrunning key is set as 1
+[4116:1460:0907/080609:INFO:serviceManager.cpp(629)] create local service plugin PluginServerStatePlugin
+[4116:1460:0907/080609:INFO:serviceManager.cpp(687)] plugin PluginServerStatePlugin DoPluginInit
+[4116:1460:0907/080609:INFO:serviceManager.cpp(1272)] repository parse over
+[4116:1460:0907/080609:INFO:DomainManager.cpp(244)] create global domain channel list::QyClient.exe
+[4116:1460:0907/080609:INFO:ChannelManager.cpp(504)] create list::QyClient.exe:: process object
+[4116:1460:0907/080609:INFO:LpcProcess.cpp(242)] create default channel GeePlayer1::geeplayer.exe::::list::QyClient.exe::::
+[4116:1460:0907/080609:INFO:UIManager.cpp(383)] quilib:call set resouce path, path is c:\program files (x86)\iqiyi video\geeplayer\3.0.40.3591\skin
+[4116:1460:0907/080609:INFO:UIMarkup.cpp(395)] quilib:Open Resource failed, Path is c:\program files (x86)\iqiyi video\geeplayer\3.0.40.3591\skin\StyleTable.xml, last error is2
+[4116:1460:0907/080609:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[4116:1460:0907/080609:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[4116:1460:0907/080609:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[4116:1460:0907/080609:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[4116:1460:0907/080609:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[4116:1460:0907/080609:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[4116:1460:0907/080612:INFO:AppRunner.cpp(720)] loop exit geeplayer call main plugin DestoryPluginEntry
+[4116:1460:0907/080612:INFO:PluginDevelopAssistant.cpp(115)] real plugin mainPlugin call DestroyPlugin
+[4116:1460:0907/080612:INFO:IPlugin.cpp(31)] destruct plugin mainPlugin
+[4116:1460:0907/080612:INFO:serviceManager.cpp(1353)] mainPlugin plugin had destroy by DestructPlugin
+[4116:1460:0907/080612:INFO:serviceManager.cpp(1906)] DestructManager begin
+[4116:1460:0907/080612:INFO:IPlugin.cpp(31)] destruct plugin PluginServerStatePlugin
+[4116:1460:0907/080612:INFO:PluginDevelopAssistant.cpp(295)] real plugin PluginServerStatePlugin call DestroyPlugin
+[4116:1460:0907/080612:INFO:serviceManager.cpp(1353)] PluginServerStatePlugin plugin had destroy by DestructPlugin
+[4116:1460:0907/080612:INFO:serviceManager.cpp(1759)] DeleteLeftPlugins begin
+[4116:1460:0907/080612:INFO:serviceManager.cpp(1822)] DeleteLeftPlugins end
+[4116:1460:0907/080612:INFO:serviceManager.cpp(508)] mainprocessisrunning key is set as 0
+[4116:1460:0907/080612:INFO:AppRunner.cpp(735)] close mutex of process geeplayer
+[4116:1460:0907/080612:INFO:AppRunner.cpp(743)] run process geeplayer end
+[5388:6448:0908/082518:INFO:AppRunner.cpp(611)] Begin run process geeplayer, -runfrom openimage "G:\BigDataNote\大数据视频笔记\Spark深入剖析\Spark深入剖析\课程十、大数据核心开发技术 - Spark深入剖析\第三章：Spark性能优化\资料\第63讲-Spark性能优化：对多次使用的RDD进行持久化或Checkpoint\对于多次操作的RDD进行持久化和Checkpoint操作.png", mainplugin is mainPlugin
+[5388:6448:0908/082518:INFO:AppRunner.cpp(617)] ProductName is GeePlayer1
+[5388:6448:0908/082518:INFO:ChannelManager.cpp(1219)] create connection thread
+[5388:6448:0908/082518:INFO:AppRunner.cpp(661)] apppluginbase version is 5.1.3.13
+[5388:6448:0908/082518:INFO:UIlib.cpp(192)] quilib: version is 5.1.3.9
+[5388:6448:0908/082518:INFO:serviceManager.cpp(508)] mainprocessisrunning key is set as 1
+[5388:6448:0908/082518:INFO:serviceManager.cpp(629)] create local service plugin PluginServerStatePlugin
+[5388:6448:0908/082518:INFO:serviceManager.cpp(687)] plugin PluginServerStatePlugin DoPluginInit
+[5388:6448:0908/082518:INFO:serviceManager.cpp(1272)] repository parse over
+[5388:6448:0908/082518:INFO:DomainManager.cpp(244)] create global domain channel list::QyClient.exe
+[5388:6448:0908/082518:INFO:ChannelManager.cpp(504)] create list::QyClient.exe:: process object
+[5388:6448:0908/082518:INFO:LpcProcess.cpp(242)] create default channel GeePlayer1::geeplayer.exe::::list::QyClient.exe::::
+[5388:6448:0908/082519:INFO:UIManager.cpp(383)] quilib:call set resouce path, path is c:\program files (x86)\iqiyi video\geeplayer\3.0.40.3591\skin
+[5388:6448:0908/082519:INFO:UIMarkup.cpp(395)] quilib:Open Resource failed, Path is c:\program files (x86)\iqiyi video\geeplayer\3.0.40.3591\skin\StyleTable.xml, last error is2
+[5388:6448:0908/082519:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[5388:6448:0908/082519:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[5388:6448:0908/082519:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[5388:6448:0908/082519:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[5388:6448:0908/082519:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[5388:6448:0908/082519:INFO:UIDlgBuilder.cpp(512)] quilib:create root control failed
+[5388:6448:0908/082527:INFO:AppRunner.cpp(720)] loop exit geeplayer call main plugin DestoryPluginEntry
+[5388:6448:0908/082527:INFO:PluginDevelopAssistant.cpp(115)] real plugin mainPlugin call DestroyPlugin
+[5388:6448:0908/082527:INFO:IPlugin.cpp(31)] destruct plugin mainPlugin
+[5388:6448:0908/082527:INFO:serviceManager.cpp(1353)] mainPlugin plugin had destroy by DestructPlugin
+[5388:6448:0908/082527:INFO:serviceManager.cpp(1906)] DestructManager begin
+[5388:6448:0908/082527:INFO:IPlugin.cpp(31)] destruct plugin PluginServerStatePlugin
+[5388:6448:0908/082527:INFO:PluginDevelopAssistant.cpp(295)] real plugin PluginServerStatePlugin call DestroyPlugin
+[5388:6448:0908/082527:INFO:serviceManager.cpp(1353)] PluginServerStatePlugin plugin had destroy by DestructPlugin
+[5388:6448:0908/082527:INFO:serviceManager.cpp(1759)] DeleteLeftPlugins begin
+[5388:6448:0908/082527:INFO:serviceManager.cpp(1822)] DeleteLeftPlugins end
+[5388:6448:0908/082527:INFO:serviceManager.cpp(508)] mainprocessisrunning key is set as 0
+[5388:6448:0908/082527:INFO:AppRunner.cpp(735)] close mutex of process geeplayer
+[5388:6448:0908/082527:INFO:AppRunner.cpp(743)] run process geeplayer end
