@@ -1,0 +1,24 @@
+<web-fragment version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-fragment_3_0.xsd">
+
+    <name>myServlet</name>
+    <ordering>
+        <!-- 在其它模块之前加载 -->
+        <before>
+            <others/>
+        </before>
+    </ordering>
+
+    <!--过滤器配置-->
+    <filter>
+        <filter-name>Redirect Filter</filter-name>
+        <filter-class>filter.RedirectFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>Redirect Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+
+    </filter-mapping>
+</web-fragment> 
