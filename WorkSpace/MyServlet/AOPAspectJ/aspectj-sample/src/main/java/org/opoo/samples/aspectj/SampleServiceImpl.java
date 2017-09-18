@@ -18,17 +18,32 @@
 package org.opoo.samples.aspectj;
 
 
-public class SampleServiceImpl implements SampleService
-{
-	public int add(int x, int y) {
-		return x + y;
-	}
+public class SampleServiceImpl implements SampleService {
+    public int add(int x, int y) {
+        return x + y;
+    }
 
-	/**
-	 * 带自定义Annotation的方法。
-	 */
-	@AuthCheck
-	public String getPassword(String username) {
-		return "password";
-	}
+    /**
+     * 带自定义Annotation的方法。
+     */
+    @AuthCheck
+    public String getPassword(String username) {
+        return "password";
+    }
+
+    class myEx extends Exception {
+    }
+
+    public void foo(int x) throws myEx {
+        throw new myEx();
+    }
+
+    public void testFoo() throws myEx {
+        SampleServiceImpl myClass = new SampleServiceImpl();
+        try {
+            myClass.foo(3);
+        } catch (myEx e) {
+            System.out.println("meet ex in catch " + e);
+        }
+    }
 }
