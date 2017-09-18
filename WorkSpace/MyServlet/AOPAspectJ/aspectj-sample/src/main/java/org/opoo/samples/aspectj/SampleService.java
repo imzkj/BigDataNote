@@ -22,4 +22,6 @@ public interface SampleService {
 	int add(int x, int y);
 	
 	String getPassword(String username);
+
+	void testFoo() throws SampleServiceImpl.myEx;
 }
