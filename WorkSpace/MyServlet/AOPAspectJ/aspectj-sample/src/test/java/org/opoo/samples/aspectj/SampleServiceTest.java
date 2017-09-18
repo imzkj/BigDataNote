@@ -65,4 +65,8 @@ public class SampleServiceTest {
         }
     }
 
+    @Test
+    public void testException() throws Exception {
+        service.testFoo();
+    }
 }
