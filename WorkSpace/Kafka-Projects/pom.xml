@@ -95,7 +95,7 @@
                <archive>
                   <manifest>
                      <!--指定主类-->
-                     <mainClass>指定主类</mainClass>
+                     <mainClass>kafkaOperations.KafkaOperation</mainClass>
                   </manifest>
                </archive>
                <descriptorRefs>
