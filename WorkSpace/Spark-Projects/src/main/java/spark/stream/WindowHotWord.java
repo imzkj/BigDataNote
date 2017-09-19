@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
@@ -139,7 +140,7 @@ public class WindowHotWord {
 					}
 					  
 				});
-		
+
 		// 这个无关紧要，只是为了触发job的执行，所以必须有output操作
 		finalDStream.print();
 		

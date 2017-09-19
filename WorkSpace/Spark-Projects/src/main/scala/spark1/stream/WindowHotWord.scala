@@ -19,7 +19,7 @@ object WindowHotWord {
     val searchWordsDStream = searchLogsDStream.map { _.split(" ")(1) }  
     val searchWordPairsDStream = searchWordsDStream.map { searchWord => (searchWord, 1) }  
     val searchWordCountsDSteram = searchWordPairsDStream.reduceByKeyAndWindow(
-        (v1: Int, v2: Int) => v1 + v2, 
+        (v1: Int, v2: Int) => v1 + v2,
         Seconds(60), 
         Seconds(10))  
         
