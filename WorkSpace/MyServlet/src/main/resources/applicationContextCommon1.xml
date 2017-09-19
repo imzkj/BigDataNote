@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <bean id="methodTimeAdvice" class="aop.SpringCommon.MethodTimeAdvice" />
+    <bean id="helloService" class="aop.SpringCommon.HelloService" />
+
+    <bean id="methodTimeAdvisor"
+          class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="advice">
+            <ref bean="methodTimeAdvice" />
+        </property>
+        <!--对指定类的任何方法有效-->
+        <property name="patterns">
+            <value>.*.*</value>
+        </property>
+    </bean>
+
+    <!-- 根据 Bean 的名字自动实现代理拦截 -->
+    <bean
+            class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="interceptorNames">
+            <list>
+                <value>methodTimeAdvisor</value>
+            </list>
+        </property>
+        <property name="beanNames">
+            <list>
+                <!-- 添加到其中的 Bean 自动就被代理拦截了 -->
+                <value>*Service</value>
+            </list>
+        </property>
+    </bean>
+</beans>

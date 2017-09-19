@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!--下面的配置方式需为每个应用方法执行时间记录的 Bean 在外层包一个 ProxyFactoryBean，原来的 Bean 设为一个 Target 实在时麻烦了。-->
+    <bean id="methodTimeAdvice" class="aop.SpringCommon.MethodTimeAdvice"/>
+    <bean id="helloServiceTarget" class="aop.SpringCommon.HelloService"/>
+
+    <bean id="methodTimeAdvisor"
+          class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="advice">
+            <ref bean="methodTimeAdvice"/>
+        </property>
+        <!--对指定类的任何方法有效-->
+        <property name="patterns">
+            <value>.*.*</value>
+        </property>
+    </bean>
+
+    <bean id="helloService"    class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="interceptorNames">
+            <list>
+                <value>methodTimeAdvisor</value>
+            </list>
+        </property>
+        <property name="target">
+            <ref bean="helloServiceTarget"/>
+        </property>
+    </bean>
+
+</beans>
