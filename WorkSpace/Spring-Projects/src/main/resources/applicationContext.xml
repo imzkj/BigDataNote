@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd ">
+
+    <!--<context:annotation-config/>-->
+    <!--&lt;!&ndash; 自动扫描web包 ,将带有注解的类 纳入spring容器管理 &ndash;&gt;-->
+    <!--<context:component-scan base-package="com"></context:component-scan>-->
+
+    <!--占位符文件配置-->
+    <bean id="placeHolder"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location">
+            <value>classpath:/config.properties</value>
+        </property>
+    </bean>
+
+    <bean id="testplace" class="com.model.testplace">
+        <property name="age">
+            <value>${age}</value>
+        </property>
+        <property name="name">
+            <value>${name}</value>
+        </property>
+    </bean>
+
+    <!--初始化-->
+    <bean id="configInit" lazy-init="false" class="com.util.ConfigInit" init-method="init">
+
+    </bean>
+</beans>
