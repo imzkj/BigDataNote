@@ -1,3 +1,7 @@
-import numpy as py
+import numpy as np
 import pandas as pd
-from pandas import Series,DataFrame
+pd.Seris
+from pandas import DataFrame,Series
+arr=np.arange(20)
+
+series=Series(arr)
