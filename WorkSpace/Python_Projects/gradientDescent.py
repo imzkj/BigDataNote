@@ -46,8 +46,9 @@ print(u"最终结果为：", (x, y))
 
 fig = plt.figure()
 ax = Axes3D(fig)
-X2 = np.arange(-2, 2, 0.2)
-Y2 = np.arange(-2, 2, 0.2)
+# meshgrid生成的坐标刻度为0.02
+X2 = np.arange(-2, 2, 0.02)
+Y2 = np.arange(-2, 2, 0.02)
 X2, Y2 = np.meshgrid(X2, Y2)
 Z2 = X2 ** 2 + Y2 ** 2
 ax.plot_surface(X2, Y2, Z2, rstride=1, cstride=1, cmap="rainbow")
