@@ -37,11 +37,16 @@ public class HBaseUtil {
             conf.set("hbase.zookeeper.property.clientPort", "2181");
             conf.set("hbase.zookeeper.quorum", "10.201.3.46,10.201.3.65,10.201.3.66");
             conf.set("hbase.client.scanner.caching", "100");
-            conf.set("hbase.rpc.timeout", "6000");//rpc的超时时间
-            conf.set("ipc.socket.timeout", "2000");//socket建立链接的超时时间，应该小于或者等于rpc的超时时间
-            conf.set("hbase.client.retries.number", "3");//重试次数
-            conf.set("hbase.client.pause", "100");//重试休眠时间，默认为1s
-            conf.set("zookeeper.recovery.retry", "3");//zk重试次数
+			//rpc的超时时间
+            conf.set("hbase.rpc.timeout", "6000");
+			//socket建立链接的超时时间，应该小于或者等于rpc的超时时间
+            conf.set("ipc.socket.timeout", "2000");
+			//重试次数
+            conf.set("hbase.client.retries.number", "3");
+			//重试休眠时间，默认为1s
+            conf.set("hbase.client.pause", "100");
+			//zk重试次数
+            conf.set("zookeeper.recovery.retry", "3");
             connection = ConnectionFactory.createConnection(conf);
         } catch (IOException e) {
             logger.error("HBase Connection init failed " + e.getMessage());

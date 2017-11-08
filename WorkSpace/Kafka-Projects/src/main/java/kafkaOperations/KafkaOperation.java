@@ -24,9 +24,9 @@ public class KafkaOperation {
 
     public static Consumer<String, String> getConsumer(String groupid) {
         Properties props = new Properties();
-        //kafka所在机器端口，可以指定kafka集群多个机器：192.168.58.28:9093,192.168.58.29:9093,192.168.58.30:9093
+        //kafka所在机器端口，可以指定kafka集群多个机器：xxxx:9093
         //直接连接kafka集群，也可以连接zookeeper集群
-        props.put("bootstrap.servers", "10.201.3.65:9093");
+        props.put("bootstrap.servers", "xxx:9093");
         //指定消费者所在组名，一个组内的成员有一个消费到了新数据另外的就都不会再消费
         props.put("group.id", groupid);
         props.put("enable.auto.commit", true);
@@ -64,9 +64,9 @@ public class KafkaOperation {
     //获取一般数据格式，也可以用来显示keyvalue形式的value
     public static void getNormalData() {
         Properties prop = new Properties();
-        prop.put("zookeeper.connect", "10.201.3.46:2181,10.201.3.65:2181");
+        prop.put("zookeeper.connect", "xxx:2181,xxx:2181");
         prop.put("serializer.class", StringEncoder.class.getName());
-        prop.put("metadata.broker.list", "10.201.3.46:9093,10.201.3.65:9093");
+        prop.put("metadata.broker.list", "xxx:9093,xxx:9093");
         prop.put("group.id", "group1");
         ConsumerConnector consumer = kafka.consumer.Consumer.createJavaConsumerConnector(new ConsumerConfig(prop));
         Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
