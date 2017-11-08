@@ -9,4 +9,9 @@ class Student(object):
 joke=Student('Joke',28)
 # print(joke.__address
 print(joke._Student__address)
-#类内的双下划线的内容，类外调用使用被改为属性前面加上单下划线和类名
+#类内的双下划线# 的内容，类外调用使用被改为属性前面加上单下划线和类名
+
+
+
+r = [0 for b in range(2) if not b]
+print r
