@@ -71,7 +71,7 @@ public class KafkaOperation {
         ConsumerConnector consumer = kafka.consumer.Consumer.createJavaConsumerConnector(new ConsumerConfig(prop));
         Map<String, Integer> topicCountMap = new HashMap<String, Integer>();
 
-        topicCountMap.put("datateam.event.marketing", 1);
+        topicCountMap.put("data", 1);
         Map<String, List<KafkaStream<byte[], byte[]>>> messageStreams = consumer.createMessageStreams(topicCountMap);
         while (true){
             final KafkaStream<byte[], byte[]> kafkaStream = messageStreams.get("datateam.event.marketing").get(0);
