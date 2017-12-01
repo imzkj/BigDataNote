@@ -35,7 +35,7 @@ public class HBaseUtil {
         try {
             conf = HBaseConfiguration.create();
             conf.set("hbase.zookeeper.property.clientPort", "2181");
-            conf.set("hbase.zookeeper.quorum", "10.201.3.46,10.201.3.65,10.201.3.66");
+            conf.set("hbase.zookeeper.quorum", "xxxx,xxxx,xxxx");
             conf.set("hbase.client.scanner.caching", "100");
 			//rpc的超时时间
             conf.set("hbase.rpc.timeout", "6000");
