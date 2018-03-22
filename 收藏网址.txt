@@ -1,0 +1,8 @@
+神经网络中的反向传播法——BackPropagation
+https://www.cnblogs.com/charlotte77/p/5629865.html
+
+弗洛伊德算法
+http://blog.csdn.net/qq_34374664/article/details/52261672
+
+storm性能优化
+https://www.jianshu.com/p/f645eb7944b0
