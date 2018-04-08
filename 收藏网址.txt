@@ -6,3 +6,12 @@ http://blog.csdn.net/qq_34374664/article/details/52261672
 
 storm性能优化
 https://www.jianshu.com/p/f645eb7944b0
+
+信息增益的计算
+http://blog.csdn.net/guomutian911/article/details/78599450
+
+scikit-learn 逻辑回归类库使用小结
+https://www.cnblogs.com/pinard/p/6035872.html
+
+PCA主成分分析
+https://www.cnblogs.com/chenbjin/p/4200790.html
