@@ -15,3 +15,6 @@ https://www.cnblogs.com/pinard/p/6035872.html
 
 PCA主成分分析
 https://www.cnblogs.com/chenbjin/p/4200790.html
+
+梯度下降 随机梯度下降  批量梯度下降  小批量梯度下降
+https://www.2cto.com/net/201610/557111.html
