@@ -74,4 +74,61 @@
         </dependency>
         <!--返回json需加-->
     </dependencies>
+    
+    <profiles>
+        <profile>
+            <id>measurement</id>
+            <properties>
+                <package.environment>measurement</package.environment>
+            </properties>
+            <!--默认打包测试的配置-->
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>official</id>
+            <properties>
+                <package.environment>official</package.environment>
+            </properties>
+        </profile>
+    </profiles>
+    
+    <build>
+        <finalName>Spring-Projects</finalName>
+        <defaultGoal>compile</defaultGoal>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>measurement/*</exclude>
+                    <exclude>official/*</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1.1</version>
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+                    <webResources>
+                        <resource>
+                            <!--指定项目编译时的打包源文件，${package.environment}则为动态指定需要打包的资源配置-->
+                            <directory>src/main/resources/${package.environment}</directory>
+                            <!--指定项目编译后的打包路径-->
+                            <targetPath>WEB-INF/classes</targetPath>
+                            <filtering>true</filtering>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
