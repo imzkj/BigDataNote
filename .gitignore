@@ -32,3 +32,8 @@ out
 lib
 *.iml
 *.MF
+/WorkSpace/DL_STUDY/caffe_case/bvlc_reference_caffenet.caffemodel
+*.pyc
+*.cmd
+WorkSpace/Spark-Projects/spark-1.3.0/
+*.DS_Store

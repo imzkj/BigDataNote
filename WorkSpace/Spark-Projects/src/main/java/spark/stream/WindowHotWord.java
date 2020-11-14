@@ -8,6 +8,7 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
+import org.apache.spark.storage.StorageLevel;
 import org.apache.spark.streaming.Durations;
 import org.apache.spark.streaming.api.java.JavaDStream;
 import org.apache.spark.streaming.api.java.JavaPairDStream;
@@ -128,7 +129,7 @@ public class WindowHotWord {
 									}
 									
 								});
-						
+
 						// 然后用take()，获取排名前3的热点搜索词
 						List<Tuple2<String, Integer>> hogSearchWordCounts = 
 								sortedSearchWordCountsRDD.take(3);
